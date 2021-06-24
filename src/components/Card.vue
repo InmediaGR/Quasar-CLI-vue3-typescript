@@ -31,7 +31,8 @@ export default defineComponent({
     const router = useRouter();
 
     const goToPost = function (id: string): any {
-      console.log('id', id);
+      // console.log('id', id);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       void router.push('/post' + id);
     };
 

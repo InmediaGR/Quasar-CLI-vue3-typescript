@@ -19,6 +19,7 @@ export default defineComponent({
     const store = useStore(storeKey);
 
     let postsList = computed(():any => {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       return store.getters['example/somePosts'];
     });
 

@@ -35,16 +35,15 @@ export default defineComponent({
     const router = useRouter();
 
     const goHome = function ():any {
-      console.log('wwww')
       void router.push('/');
     };
 
-    watch(
-      ():any => route.params.id,
-      ():any => {
-        console.log('route.params', route.params.id);
-      }
-    );
+    // watch(
+    //   () => route.params.id,
+    //   () => {
+    //     console.log('route.params', route.params.id);
+    //   }
+    // );
     return {
       goHome
     };

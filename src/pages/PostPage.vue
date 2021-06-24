@@ -31,15 +31,15 @@ export default defineComponent({
 
 
     void store.dispatch('example/loadPosts').then(() => {
-      console.log('555')
       void store.dispatch('example/somePost', route.params.id);
     });
 
 
 
     const post = computed(():any => {
-      console.log('PostPage', route.params.id);
-      return store.getters['example/somePost'];
+      // console.log('PostPage', route.params.id);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+        return store.getters['example/somePost'];
     });
 
     return {
