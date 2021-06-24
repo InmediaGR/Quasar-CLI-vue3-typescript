@@ -16,7 +16,7 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, ref, computed } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
 import { storeKey } from '../store/index';
@@ -33,8 +33,6 @@ export default defineComponent({
     void store.dispatch('example/loadPosts').then(() => {
       void store.dispatch('example/somePost', route.params.id);
     });
-
-
 
     const post = computed(():any => {
       // console.log('PostPage', route.params.id);

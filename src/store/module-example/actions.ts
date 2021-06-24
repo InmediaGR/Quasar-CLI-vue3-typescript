@@ -4,9 +4,6 @@ import { ExampleStateInterface } from '../types';
 import axios from 'axios'
 
 const actions: ActionTree<ExampleStateInterface, StateInterface> = {
-  someAction () {
-    // your code
-  },
   async loadPosts({state, commit}) {
     if(!state.posts.hasOwnProperty('collection'))
     try {
@@ -19,7 +16,6 @@ const actions: ActionTree<ExampleStateInterface, StateInterface> = {
   },
   somePost({state, commit}, id='wewe') {
     console.log('somePost action', state)
-
     const findPost = state.posts.collection.items.find(el => el.data[0].nasa_id === id)
      commit('somePost', findPost)
   }

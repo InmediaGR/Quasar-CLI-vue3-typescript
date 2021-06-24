@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import PostList from 'src/components/PostList.vue';
-import { defineComponent, ref, reactive, computed } from 'vue';
+import { defineComponent, computed } from 'vue';
 import { useStore } from 'vuex';
 import { storeKey } from '../store/index';
 

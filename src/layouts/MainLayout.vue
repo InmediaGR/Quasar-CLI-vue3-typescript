@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { defineComponent } from 'vue';
+import {  useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import { storeKey } from '../store/index';
 
@@ -31,10 +31,10 @@ export default defineComponent({
     const store = useStore(storeKey);
     void store.dispatch('example/loadPosts');
 
-    const route = useRoute();
+    // const route = useRoute();
     const router = useRouter();
 
-    const goHome = function ():any {
+    const goHome = function () {
       void router.push('/');
     };
 
